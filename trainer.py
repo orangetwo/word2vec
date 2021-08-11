@@ -88,7 +88,6 @@ class Trainer(object):
         if 'cuda' in str(self.device):
             torch.cuda.empty_cache()
 
-        print(f'result : {result}')
         return result
 
     def train(self, train_data):
@@ -103,6 +102,7 @@ class Trainer(object):
                 self.lr_scheduler.epoch_step(epoch)
 
             if self.training_monitor:
+                # Output each loss and draw
                 self.training_monitor.epoch_step(train_log)
             self.save()
 
