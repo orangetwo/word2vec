@@ -1,7 +1,4 @@
 import torch
-import os
-import logging
-from pathlib import Path
 
 from utils import model_device
 

@@ -1,6 +1,5 @@
 # encoding:utf-8
 import argparse
-import torch
 import warnings
 from torch import optim
 
@@ -9,8 +8,7 @@ from optimizer import StepLR
 from trainer import Trainer
 from dataset import DataLoader
 from skipgram import SkipGram
-# from  import init_logger, logger
-# from pyw2v.common.tools import seed_everything
+
 from trainingmonitor import TrainingMonitor
 from utils import init_logger, logger, seed_everything
 

@@ -1,5 +1,6 @@
-import logging
 import os
+import logging
+import pickle
 from pathlib import Path
 import random
 
@@ -7,6 +8,7 @@ import numpy as np
 import torch
 
 logger = logging.getLogger()
+
 
 def prepare_device(n_gpu_use):
     """
@@ -91,3 +93,17 @@ def seed_everything(seed=1029):
     # some cudnn methods can be random even after fixing the seed
     # unless you tell it to be deterministic
     torch.backends.cudnn.deterministic = True
+
+
+def save_pickle(data, file_path):
+    '''
+    保存成pickle文件
+    :param data:
+    :param file_name:
+    :param pickle_path:
+    :return:
+    '''
+    if isinstance(file_path, Path):
+        file_path = str(file_path)
+    with open(file_path, 'wb') as f:
+        pickle.dump(data, f)

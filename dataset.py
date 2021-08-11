@@ -6,8 +6,7 @@ import numpy as np
 from collections import Counter
 
 import operator
-import pickle
-from pathlib import Path
+from utils import save_pickle
 
 
 class DataLoader(object):
@@ -206,15 +205,4 @@ class DataLoader(object):
         return len([w for ex in self.train_examples for w in ex if len(ex) >= 2])
 
 
-def save_pickle(data, file_path):
-    '''
-    保存成pickle文件
-    :param data:
-    :param file_name:
-    :param pickle_path:
-    :return:
-    '''
-    if isinstance(file_path, Path):
-        file_path = str(file_path)
-    with open(file_path, 'wb') as f:
-        pickle.dump(data, f)
+
