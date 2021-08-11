@@ -58,11 +58,8 @@ def run(args):
 def main():
     parser = argparse.ArgumentParser(description='PyTorch Word2Vec model training')
     parser.add_argument("--model", type=str, default='skip_gram')
-    parser.add_argument("--task", type=str, default='training word vector')
     parser.add_argument('--seed', default=2018, type=int,
                         help='Seed for initializing training.')
-    parser.add_argument('--resume', default=False, type=bool,
-                        help='Choose whether resume checkpoint model')
     parser.add_argument('--embedd_dim', default=300, type=int)
     parser.add_argument('--epochs', default=6, type=int)
     parser.add_argument('--window_size', default=5, type=int)

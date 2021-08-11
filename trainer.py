@@ -17,13 +17,11 @@ class Trainer(object):
                  vector_save_path,
                  optimizer,
                  lr_scheduler,
-                 training_monitor=None,
-                 verbose=1):
+                 training_monitor=None):
         self.model = model
         self.epochs = epochs
         self.optimizer = optimizer
         self.logger = logger
-        self.verbose = verbose
         self.training_monitor = training_monitor
         self.lr_scheduler = lr_scheduler
         self.n_gpu = n_gpu
@@ -64,6 +62,7 @@ class Trainer(object):
 
     # epoch训练
     def train_epoch(self, train_data):
+        # 进度条
         pbar = ProgressBar(n_batch=len(train_data))
         train_loss_list = []
         self.model.train()
