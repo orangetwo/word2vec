@@ -1,6 +1,4 @@
 # encoding:utf-8
-from pathlib import Path
-
 
 configs = {
     'data_path': './dataset/zhihu.txt',
