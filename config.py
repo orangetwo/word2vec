@@ -1,7 +1,7 @@
 # encoding:utf-8
 
 configs = {
-    'data_path': './dataset/zhihu.txt',
+    'data_path': './dataset/data.txt',
     'model_save_path': './output/model/word2vec.pth',
 
     'vocab_path': './dataset/processed/vocab.pkl',  # 语料数据
