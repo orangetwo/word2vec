@@ -7,7 +7,7 @@
 
  - 整理数据集格式，形如`data/zhihu.txt`(这里使用的以空格键作为分词符,可以参考`propress.py`处理文本)
  - 配置自己的`config.py`(主要是各种路径)
- - 运行`python train_word2vec.py`进行word2vec模型训练
+ - 运行`python word2vec.py`进行word2vec模型训练
 
 ### 阅读代码
  - 主要参考为 tmikolov的`word2vec.c`实现, 同时也参考了一些其他Python版本的实现
